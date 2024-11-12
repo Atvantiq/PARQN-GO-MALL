@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dash_nav_graph"
+    app:startDestination="@id/parkingFragment">
+
+    <fragment
+        android:id="@+id/parkingFragment"
+        android:name="com.atvantiq.parqngomall.ui.features.dashboard.fragments.ParkingFragment"
+        android:label="fragment_parking"
+        tools:layout="@layout/fragment_parking" />
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.atvantiq.parqngomall.ui.features.dashboard.fragments.HistoryFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history" />
+    <fragment
+        android:id="@+id/moreFragment"
+        android:name="com.atvantiq.parqngomall.ui.features.dashboard.fragments.MoreFragment"
+        android:label="fragment_more"
+        tools:layout="@layout/fragment_more" />
+    <fragment
+        android:id="@+id/vehiclesFragment"
+        android:name="com.atvantiq.parqngomall.ui.features.dashboard.fragments.VehiclesFragment"
+        android:label="VehiclesFragment" />
+</navigation>

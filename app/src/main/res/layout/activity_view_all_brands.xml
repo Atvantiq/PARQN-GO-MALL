@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ui.features.dashboard.brands.ViewAllBrandsActivity">
+
+        <include
+            android:id="@+id/brandsToolbar"
+            layout="@layout/toolbar_custom" />
+
+        <androidx.appcompat.widget.SearchView
+            android:layout_marginTop="@dimen/margin"
+            android:layout_marginEnd="@dimen/margin"
+            android:layout_marginStart="@dimen/margin"
+            android:id="@+id/search_brands"
+            android:background="@drawable/et_gray_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:iconifiedByDefault="false"
+            app:defaultQueryHint="Search..."
+            android:queryHint="Search..." />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/brandList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/margin">
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </LinearLayout>
+</layout>

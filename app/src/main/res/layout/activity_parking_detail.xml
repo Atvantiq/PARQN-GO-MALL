@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data></data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.features.dashboard.searchParking.ParkingDetailsActivity">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/parkingImageSlider"
+                    android:layout_width="0dp"
+                    android:layout_height="230dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/backPressBt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:elevation="@dimen/elevation"
+                    android:padding="@dimen/padding"
+                    android:src="@drawable/arrow_white_24"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_margin="@dimen/margin_small"
+                    android:id="@+id/parkingInfoCard"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:cardElevation="@dimen/elevation"
+                    app:cardMaxElevation="@dimen/elevation"
+                    app:cardPreventCornerOverlap="true"
+                    app:cardUseCompatPadding="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/parkingImageSlider">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/padding_small">
+
+                        <TextView
+                            android:id="@+id/parkingTitle"
+                            style="@style/CustomRegularDarkTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Basement 1"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/parkingImageSlider"
+                            tools:text="Parking Lot of Man Car Parking" />
+
+                        <TextView
+                            android:id="@+id/parkingAddress"
+                            style="@style/CustomMediumTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:gravity="center"
+                            android:text="Sector 67, Mohali"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/parkingTitle"
+                            tools:text="Parking lot PMJV+G64, Ekta Market Rd" />
+
+                        <TextView
+                            android:id="@+id/parkingAvailability"
+                            style="@style/CustomMediumTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:gravity="center"
+                            android:text="Open 24 Hours"
+                            android:textColor="@color/green"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/parkingAddress"
+                            tools:text="Open 24 Hours" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:id="@+id/parkingDetailsCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardElevation="@dimen/elevation"
+                    app:cardPreventCornerOverlap="true"
+                    app:cardUseCompatPadding="true"
+                    app:layout_constraintTop_toBottomOf="@+id/parkingInfoCard">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:padding="@dimen/padding"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/parking_title"
+                            style="@style/CustomLargeDarkTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Parking Details"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/total_parking_label"
+                            style="@style/CustomRegularDarkTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:text="Total Parking Spaces:"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/parking_title" />
+
+                        <TextView
+                            android:id="@+id/total_parking_value"
+                            style="@style/CustomRegularDarkTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_small"
+                            android:text="120"
+                            app:layout_constraintStart_toEndOf="@id/total_parking_label"
+                            app:layout_constraintTop_toTopOf="@id/total_parking_label" />
+
+                        <TextView
+                            android:id="@+id/available_parking_label"
+                            style="@style/CustomRegularDarkTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Available Spaces:"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/total_parking_label" />
+
+                        <TextView
+                            android:id="@+id/available_parking_value"
+                            style="@style/CustomRegularDarkTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_small"
+                            android:text="45"
+                            app:layout_constraintStart_toEndOf="@id/available_parking_label"
+                            app:layout_constraintTop_toTopOf="@id/available_parking_label" />
+
+
+                        <TextView
+                            android:id="@+id/facilities_label"
+                            style="@style/CustomRegularDarkTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin"
+                            android:text="Facilities:"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/available_parking_label" />
+
+                        <LinearLayout
+                            android:id="@+id/facilities_list"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:orientation="vertical"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/facilities_label">
+
+                            <TextView
+                                style="@style/CustomMediumDarkTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Charging Stations" />
+
+                            <TextView
+                                style="@style/CustomMediumDarkTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Restrooms" />
+
+                            <TextView
+                                style="@style/CustomMediumDarkTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Security Cameras" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_marginTop="@dimen/margin"
+                            android:id="@+id/other_details_label"
+                            style="@style/CustomRegularDarkTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Other Details:"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/facilities_list" />
+
+                        <TextView
+                            android:id="@+id/parking_type_label"
+                            style="@style/CustomMediumDarkTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:text="Parking Type:"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/other_details_label" />
+
+                        <TextView
+                            android:id="@+id/parking_type_value"
+                            style="@style/CustomMediumDarkTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_small"
+                            android:text="Indoor"
+                            app:layout_constraintStart_toEndOf="@id/parking_type_label"
+                            app:layout_constraintTop_toTopOf="@id/parking_type_label" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/bookButton"
+                    style="@style/CustomBlackButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin"
+                    android:layout_marginTop="@dimen/margin_large"
+                    android:layout_marginEnd="@dimen/margin"
+                    android:layout_weight="1"
+                    android:drawableEnd="@drawable/ic_arrow_forward_white_ios_24"
+                    android:elevation="@dimen/elevation"
+                    android:text="Book Parking"
+                    app:layout_constraintTop_toBottomOf="@+id/parkingDetailsCard" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

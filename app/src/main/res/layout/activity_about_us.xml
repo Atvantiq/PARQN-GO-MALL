@@ -1,0 +1,89 @@
+<layout>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:id="@+id/main"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            layout="@layout/toolbar_custom"
+            android:id="@+id/aboutUsToolbar"
+            />
+
+        <LinearLayout
+            android:padding="@dimen/padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/CustomLargeDarkTextView"
+                android:id="@+id/aboutTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="About Us"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:layout_marginTop="@dimen/margin_small"
+                style="@style/CustomRegularDarkTextView"
+                android:id="@+id/shortDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="We provide seamless and efficient parking management solutions for malls."
+                android:layout_marginBottom="@dimen/margin" />
+
+            <TextView
+                style="@style/CustomMediumDarkTextView"
+                android:id="@+id/detailedInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Our company specializes in managing parking facilities at shopping malls, providing a streamlined experience for both mall visitors and management. With real-time slot tracking, efficient parking reservation systems, and payment integration, we ensure that your parking experience is hassle-free."
+                android:layout_marginBottom="@dimen/margin" />
+
+            <TextView
+                style="@style/CustomLargeDarkTextView"
+                android:id="@+id/servicesTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Our Services"
+                android:textStyle="bold"
+                android:layout_marginBottom="@dimen/margin_small" />
+
+            <TextView
+                style="@style/CustomMediumDarkTextView"
+                android:id="@+id/servicesDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="- Real-Time Parking Slot Management\n- Reservation and Booking Systems\n- Secure Payment Integration\n- Parking Analytics and Reports\n- 24/7 Customer Support"
+                android:layout_marginBottom="@dimen/margin" />
+
+            <TextView
+                style="@style/CustomLargeDarkTextView"
+                android:id="@+id/contactTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Contact Us"
+                android:textStyle="bold"
+                android:layout_marginBottom="@dimen/margin_small" />
+
+            <TextView
+                style="@style/CustomMediumDarkTextView"
+                android:id="@+id/contactInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email: support@mallparking.com\nPhone: +1-234-567-890"
+                android:layout_marginBottom="@dimen/margin" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
+</layout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<androidx.appcompat.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/custom_toolbar_white"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@color/white"
+    android:elevation="@dimen/elevation"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+    <!-- Back arrow button -->
+    <ImageButton
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/arrow_black_24"
+        android:contentDescription="Back"
+        android:layout_gravity="start"
+        android:padding="@dimen/padding_small"/>
+
+    <!-- Centered text -->
+    <TextView
+        style="@style/CustomRegularDarkTextView"
+        android:id="@+id/toolbar_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Title Here"
+        android:layout_gravity="center"
+        android:textStyle="bold" />
+
+</androidx.appcompat.widget.Toolbar>
+</layout>

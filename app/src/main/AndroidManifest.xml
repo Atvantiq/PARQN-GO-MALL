@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:name=".app.MApplication"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ParqnGo"
+        tools:targetApi="31">
+        <activity
+            android:name=".ui.features.parkingHistory.ParkingHistoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.features.parkingBookings.ParkingBookingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.features.addVehicles.AddVehicleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.features.extendTime.ExtendTimeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.features.notifications.NotificationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.features.dashboard.brands.ViewAllBrandsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.features.payment.PaymentDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.features.payment.PaymentHistoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.features.profile.ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.features.aboutUs.AboutUsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.features.privacy.PrivacyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.features.support.SupportHelpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.features.feedback.FeedbackActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.features.parkingDetails.ParkingDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.features.profile.ProfileCompleteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.features.login.OTPVerifyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.features.dashboard.DashboardActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.features.login.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.features.splash.SplashActivity"
+            android:exported="false" />
+    </application>
+
+</manifest>

@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="date"
+            type="String" />
+
+        <variable
+            name="time"
+            type="String" />
+
+        <variable
+            name="durationSliderValue"
+            type="String" />
+
+        <variable
+            name="parkingCharges"
+            type="Integer" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/CustomLargeDarkTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin"
+            android:layout_marginTop="@dimen/margin_large"
+            android:text="Select booking Time and Date"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/padding">
+
+            <TextView
+                android:textColor="@color/black"
+                tools:text="100"
+                android:textSize="@dimen/default_extra_big_text"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:text="@{@string/priceText(String.valueOf(parkingCharges),@string/rupeeSymbol)}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></TextView>
+
+            <TextView
+                android:layout_marginTop="@dimen/margin_small"
+                style="@style/CustomMediumTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Parking Type" />
+
+            <RadioGroup
+                android:id="@+id/parkingTypeToggleButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:checkedButton="@+id/regularBt"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/regularBt"
+                    style="@style/SwitchButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Regular" />
+
+                <RadioButton
+                    android:id="@+id/evChargingBt"
+                    style="@style/SwitchButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/margin_small_extra"
+                    android:layout_weight="1"
+                    android:text="EV Charging" />
+
+            </RadioGroup>
+
+
+            <TextView
+                android:id="@+id/selectDateLabel"
+                style="@style/CustomMediumTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:text="Select date &amp; Time"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></TextView>
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/margin_small"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:layout_weight="1"
+                    android:id="@+id/dateEt"
+                    style="@style/CustomEditRegularStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:cursorVisible="false"
+                    android:drawableEnd="@drawable/ic_date_picker"
+                    android:focusable="false"
+                    android:hint="DD/MM/YYYY"
+                    android:imeOptions="actionNext"
+                    android:inputType="none"
+                    android:maxLines="1"
+                    android:text="@{date}"
+                    app:layout_constraintTop_toBottomOf="@+id/selectDateLabel"></EditText>
+
+                <EditText
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_weight="1"
+                    android:id="@+id/timeEt"
+                    style="@style/CustomEditRegularStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:cursorVisible="false"
+                    android:drawableEnd="@drawable/ic_time_24"
+                    android:focusable="false"
+                    android:hint="HH:MM"
+                    android:imeOptions="actionNext"
+                    android:inputType="none"
+                    android:maxLines="1"
+                    android:text="@{time}"
+                    app:layout_constraintTop_toBottomOf="@+id/selectTimeLabel"></EditText>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/selectDurationabel"
+                style="@style/CustomMediumTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:text="Select Duration"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></TextView>
+
+            <com.google.android.material.slider.Slider
+                android:id="@+id/sliderDuration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small_extra"
+                android:stepSize="1"
+                android:valueFrom="1"
+                android:valueTo="12"
+                app:thumbColor="@color/white"
+                app:thumbStrokeColor="@color/colorPrimary"
+                app:thumbStrokeWidth="1dp"
+                app:thumbTrackGapSize="0dp"
+                app:thumbWidth="8dp"
+                app:tickColorActive="@color/white"
+                app:tickColorInactive="@color/white"
+                app:tickRadiusActive="3dp"
+                app:tickRadiusInactive="3dp"
+                app:trackColor="@color/colorPrimary" />
+
+            <TextView
+                style="@style/CustomRegularDarkTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@{durationSliderValue}"
+                android:textStyle="bold"
+                tools:text="12 Hours"></TextView>
+
+            <TextView
+                android:id="@+id/selectVehicleLabel"
+                style="@style/CustomMediumTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:text="Select Vehicle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></TextView>
+
+            <EditText
+                android:id="@+id/vehicleEt"
+                style="@style/CustomEditRegularStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:cursorVisible="false"
+                android:drawableEnd="@drawable/ic_arrow_down_24"
+                android:focusable="false"
+                android:hint="Select Vehicle"
+                android:imeOptions="actionNext"
+                android:inputType="none"
+                android:maxLines="1"
+                app:layout_constraintTop_toBottomOf="@+id/selectTimeLabel"></EditText>
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bookButton"
+            style="@style/CustomPrimaryButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin"
+            android:layout_marginTop="@dimen/margin"
+            android:layout_marginEnd="@dimen/margin"
+            android:layout_marginBottom="@dimen/margin_large"
+            android:drawableEnd="@drawable/ic_arrow_forward_white_ios_24"
+            android:elevation="@dimen/elevation"
+            android:text="@string/continue_text" />
+
+    </LinearLayout>
+</layout>

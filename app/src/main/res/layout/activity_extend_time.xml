@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ui.features.extendTime.ExtendTimeActivity">
+
+        <include
+            android:id="@+id/extendTimeToobar"
+            layout="@layout/toolbar_custom"></include>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/padding">
+
+            <ImageView
+                android:id="@+id/alarmImage"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintWidth_percent=".35"
+                android:src="@drawable/ic_alarm"
+                android:layout_width="0dp"
+                android:layout_height="0dp"/>
+
+            <TextView
+                android:id="@+id/parkingAreaLabel"
+                style="@style/CustomMediumTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Parking Area"
+                app:layout_constraintEnd_toStartOf="@+id/parkingAreaText"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/margin_small"
+                app:layout_constraintTop_toBottomOf="@+id/alarmImage"></TextView>
+
+            <TextView
+                android:id="@+id/parkingAreaText"
+                style="@style/CustomMediumDarkTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_small"
+                android:text="CCP Mall Mohali"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/parkingAreaLabel"
+                app:layout_constraintTop_toTopOf="@+id/parkingAreaLabel"></TextView>
+
+            <TextView
+                android:id="@+id/addressLabel"
+                style="@style/CustomMediumTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Address"
+                android:layout_marginTop="@dimen/margin_small_extra"
+                app:layout_constraintEnd_toStartOf="@+id/addressText"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/parkingAreaText"></TextView>
+
+            <TextView
+                android:id="@+id/addressText"
+                style="@style/CustomMediumDarkTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_small"
+                android:text="67 Sector, Mohali, Punjab"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/addressLabel"
+                app:layout_constraintTop_toTopOf="@+id/addressLabel"></TextView>
+
+            <TextView
+                android:id="@+id/parkingTypeLabel"
+                style="@style/CustomMediumTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small_extra"
+                android:text="Parking Type"
+                app:layout_constraintEnd_toStartOf="@+id/parkingTypeText"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/addressText"></TextView>
+
+            <TextView
+                android:id="@+id/parkingTypeText"
+                style="@style/CustomMediumDarkTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_small"
+                android:text="Indoor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/parkingTypeLabel"
+                app:layout_constraintTop_toTopOf="@+id/parkingTypeLabel"></TextView>
+
+            <TextView
+                android:id="@+id/parkingSpotLabel"
+                style="@style/CustomMediumTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small_extra"
+                android:text="Parking Spot"
+                app:layout_constraintEnd_toStartOf="@+id/parkingSpotText"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/parkingTypeText"></TextView>
+
+            <TextView
+                android:id="@+id/parkingSpotText"
+                style="@style/CustomMediumDarkTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_small"
+                android:text="Basement 2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/parkingSpotLabel"
+                app:layout_constraintTop_toTopOf="@+id/parkingSpotLabel"></TextView>
+
+            <TextView
+                android:id="@+id/dateLabel"
+                style="@style/CustomMediumTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small_extra"
+                android:text="Date"
+                app:layout_constraintEnd_toStartOf="@+id/dateText"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/parkingSpotText"></TextView>
+
+            <TextView
+                android:id="@+id/dateText"
+                style="@style/CustomMediumDarkTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_small"
+                android:text="11 June 2024"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/dateLabel"
+                app:layout_constraintTop_toTopOf="@+id/dateLabel"></TextView>
+
+            <TextView
+                android:id="@+id/durationLabel"
+                style="@style/CustomMediumTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small_extra"
+                android:text="Duration"
+                app:layout_constraintEnd_toStartOf="@+id/durationText"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dateText"></TextView>
+
+            <TextView
+                android:id="@+id/durationText"
+                style="@style/CustomMediumDarkTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_small"
+                android:text="4 Hours"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/durationLabel"
+                app:layout_constraintTop_toTopOf="@+id/durationLabel"></TextView>
+
+            <TextView
+                android:id="@+id/hoursLabel"
+                style="@style/CustomMediumTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small_extra"
+                android:text="Hours"
+                app:layout_constraintEnd_toStartOf="@+id/hoursText"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/durationText"></TextView>
+
+            <TextView
+                android:id="@+id/hoursText"
+                style="@style/CustomMediumDarkTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_small"
+                android:text="9:00 PM - 11:00 PM"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/hoursLabel"
+                app:layout_constraintTop_toTopOf="@+id/hoursLabel"></TextView>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/extendParkingBt"
+                style="@style/CustomPrimaryButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_x_large"
+                android:text="Extend Parking time"
+                app:layout_constraintTop_toBottomOf="@+id/hoursText" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+</layout>

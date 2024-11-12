@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">ParqnGo</string>
+    <string name="ok">Ok</string>
+    <string name="cancel">Cancel</string>
+    <!--Login Screen-->
+    <string name="enterMobileNumber">Enter mobile number</string>
+    <string name="enterPassword">Enter password</string>
+    <string name="forgotYourPassword">Forgot your password?</string>
+    <string name="login">Login</string>
+    <string name="doYouHaveAccount">Do you have an account?</string>
+    <string name="signUp">Sign Up</string>
+    <!--Register Screen-->
+    <string name="enter_first_name">Enter First Name</string>
+    <string name="enter_last_name">Enter Last Name</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="enter_valid_email">Enter Valid Email</string>
+    <string name="enter_confirm_password">Enter Confirm Password</string>
+    <string name="password_mismatch_error">Password and confirm password does not match</string>
+    <string name="accept_terms">I accept App</string>
+    <string name="terms_conditions">Terms &amp; Conditions</string>
+    <string name="terms_conditions_message">Please accept the Terms and Conditions and Privacy Policy</string>
+    <!--Parking Maps screen-->
+    <string name="warning_location_permission">"The app needs location permissions to continue the application. You can enable them in the app settings.</string>
+    <string name="warning_gps_needed">Location Services Required</string>
+    <string name="go_to_settings">Go to Settings</string>
+    <!--OTP-->
+    <string name="resentOtpMessage">Didn\'t receive it? Resend SMS in %1$s</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="total">Total</string>
+    <string name="occupied">Occupied</string>
+    <string name="free">Free</string>
+    <string name="continue_text">Continue</string>
+
+    <!--Binding Utils-->
+    <string name="concatText" translatable="false">%1$s: %2$s</string>
+    <string name="priceText" translatable="false">%1$s %2$s</string>
+    <string name="rupeeSymbol">₹</string>
+
+    <!--Register Vehicles-->
+    <string name="enter_registration_number">Enter Registration Number</string>
+    <string name="enter_vehicle_name">Enter Vehicle Name</string>
+    <string name="select_vehicle_type">Select Vehicle Type</string>
+    <string name="add_vehicle">Add Vehicle</string>
+
+</resources>

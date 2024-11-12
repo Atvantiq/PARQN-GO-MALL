@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="remainingSeconds"
+            type="String" />
+
+        <variable
+            name="isTimerFinished"
+            type="Boolean" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        tools:context=".ui.features.login.OTPVerifyActivity">
+
+        <include
+            android:id="@+id/otpToolbar"
+            layout="@layout/toolbar_custom_white"></include>
+
+        <TextView
+            android:id="@+id/otp_title"
+            style="@style/CustomRegularDarkTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/margin"
+            android:layout_marginTop="@dimen/margin"
+            android:layout_marginEnd="@dimen/margin"
+            android:text="Enter the OTP sent to" />
+
+        <TextView
+            style="@style/CustomRegularDarkTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/margin_large"
+            android:text="9592603780"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_large"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/otp_box_1"
+                style="@style/EditOTPStyle"
+                android:background="@drawable/otp_box_background"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                tools:text="1" />
+
+            <Space
+                android:layout_width="@dimen/margin_small"
+                android:layout_height="0dp" />
+
+            <EditText
+                android:id="@+id/otp_box_2"
+                style="@style/EditOTPStyle"
+                android:background="@drawable/otp_box_background"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1" />
+
+            <Space
+                android:layout_width="@dimen/margin_small"
+                android:layout_height="0dp" />
+
+            <EditText
+                android:id="@+id/otp_box_3"
+                style="@style/EditOTPStyle"
+                android:background="@drawable/otp_box_background"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1" />
+
+            <Space
+                android:layout_width="@dimen/margin_small"
+                android:layout_height="0dp" />
+
+            <EditText
+                android:id="@+id/otp_box_4"
+                style="@style/EditOTPStyle"
+                android:background="@drawable/otp_box_background"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1" />
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_submit"
+            style="@style/ButtonStateSelector"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin"
+            android:layout_marginTop="@dimen/margin"
+            android:layout_marginEnd="@dimen/margin"
+            android:enabled="false"
+            android:text="Continue"
+            tools:visibility="visible" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                tools:text="Didn't receive it? Resend SMS in 14s"
+                android:text="@{@string/resentOtpMessage(remainingSeconds)}"
+                android:visibility="@{isTimerFinished?View.GONE:View.VISIBLE}"
+                style="@style/CustomMediumTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+            <TextView
+                android:visibility="@{isTimerFinished?View.VISIBLE:View.GONE}"
+                android:id="@+id/resendOTPButton"
+                style="@style/CustomRegularDarkTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/padding"
+                android:paddingTop="@dimen/padding_small"
+                android:paddingEnd="@dimen/padding"
+                android:paddingBottom="@dimen/padding_small"
+                android:text="Resent OTP"></TextView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

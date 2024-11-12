@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+        <data>
+            <variable
+                name="vm"
+                type="com.atvantiq.parqngomall.ui.viewmodels.vehicles.VehicleVM" />
+        </data>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.features.addVehicles.AddVehicleActivity">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/addVehicleToolbar"
+                    layout="@layout/toolbar_custom" />
+
+                <EditText
+                    android:text="@={vm.registrationNumber}"
+                    android:id="@+id/registrationNumberEt"
+                    style="@style/CustomEditRegularStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin"
+                    android:layout_marginTop="@dimen/margin"
+                    android:layout_marginEnd="@dimen/margin"
+                    android:hint="@string/enter_registration_number"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapCharacters"
+                    android:maxLines="1"></EditText>
+
+                <EditText
+                    android:text="@={vm.vehicleName}"
+                    android:id="@+id/nameEt"
+                    style="@style/CustomEditRegularStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin"
+                    android:layout_marginTop="@dimen/margin"
+                    android:layout_marginEnd="@dimen/margin"
+                    android:hint="@string/enter_vehicle_name"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapCharacters"
+                    android:maxLines="1"></EditText>
+
+                <EditText
+                    android:id="@+id/vehicleType"
+                    android:text="@={vm.vehicleType}"
+                    android:onClick="@{()->vm.onVehicleTypeClick()}"
+                    android:hint="@string/select_vehicle_type"
+                    android:layout_marginTop="@dimen/margin"
+                    android:layout_marginEnd="@dimen/margin"
+                    android:layout_marginStart="@dimen/margin"
+                    style="@style/CustomSelectableEditStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></EditText>
+
+                <Button
+                    android:onClick="@{()->vm.addVehicleAPI()}"
+                    android:layout_marginEnd="@dimen/margin"
+                    android:layout_marginStart="@dimen/margin"
+                    android:id="@+id/login_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_large"
+                    android:text="@string/add_vehicle"
+                    app:layout_constraintBottom_toTopOf="@+id/social_login_buttons"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.features.support.SupportHelpActivity">
+
+    <include
+        android:id="@+id/supportToolbar"
+        layout="@layout/toolbar_custom" />
+
+    <LinearLayout
+        app:layout_constraintTop_toBottomOf="@+id/supportToolbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:padding="@dimen/padding"
+        android:layout_height="0dp">
+
+        <TextView
+            android:textColor="@color/colorPrimary"
+            style="@style/CustomSmallTextView"
+            android:text="Customer Support"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></TextView>
+
+        <TextView
+            android:paddingEnd="@dimen/margin_small"
+            android:paddingBottom="@dimen/padding_small"
+            android:drawableEnd="@drawable/ic_call_black_24"
+            android:textStyle="bold"
+            style="@style/CustomRegularDarkTextView"
+            android:text="99999999"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></TextView>
+
+        <TextView
+            android:textColor="@color/colorPrimary"
+            android:layout_marginTop="@dimen/margin_small"
+            style="@style/CustomSmallTextView"
+            android:text="Email Us at :"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></TextView>
+
+        <TextView
+            android:paddingEnd="@dimen/padding_small"
+            android:paddingBottom="@dimen/padding_small"
+            android:drawableEnd="@drawable/ic_email_black_24"
+            android:textStyle="bold"
+            style="@style/CustomRegularDarkTextView"
+            android:text="customercare@parqngo.com"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></TextView>
+
+        <TextView
+            android:textColor="@color/colorPrimary"
+            android:layout_marginTop="@dimen/margin_small"
+            style="@style/CustomSmallTextView"
+            android:text="For More Information :"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></TextView>
+
+        <TextView
+            android:paddingEnd="@dimen/padding_small"
+            android:paddingBottom="@dimen/padding_small"
+            android:drawableEnd="@drawable/ic_web_black_24"
+            android:textStyle="bold"
+            style="@style/CustomRegularDarkTextView"
+            android:text="www.parqngo.com"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></TextView>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
